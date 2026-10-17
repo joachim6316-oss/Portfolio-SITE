@@ -332,3 +332,291 @@ projet_6,video{
     color: snow;
     border: 2px solid snow;
 }
+
+
+/* ==========================================================
+   RESPONSIVE
+   Tout ce qui suit s'applique uniquement sur écrans réduits.
+   L'affichage ordinateur (> 900px) n'est pas modifié.
+   ========================================================== */
+
+/* ---------- Tablette (jusqu'à 900px) ---------- */
+@media (max-width: 900px){
+    body{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Même hauteur totale qu'avant (74px), mais la largeur
+       inclut maintenant le padding : plus de débordement */
+    header{
+        box-sizing: border-box;
+        width: 94%;
+        height: 74px;
+        padding: 20px 20px;
+    }
+
+    li{
+        font-size: 17px;
+    }
+
+    .nav-left ul,
+    .nav-right ul{
+        gap: 14px;
+    }
+
+    .contact a{
+        font-size: 17px;
+    }
+
+    .titre-index,
+    .titre-contact{
+        font-size: 60px;
+        padding-left: 30px;
+        padding-right: 30px;
+        overflow-wrap: break-word;
+    }
+
+    .sous-titre{
+        font-size: 21px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .presentation{
+        font-size: 26px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .presentation-text{
+        font-size: 17px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .mail{
+        margin-left: 30px;
+    }
+
+    .cartes-container{
+        padding: 0;
+    }
+
+    .projet-layout{
+        gap: 25px;
+    }
+
+    .footer-content .list{
+        gap: 25px;
+    }
+}
+
+/* ---------- Mobile (jusqu'à 700px) ---------- */
+@media (max-width: 700px){
+    body{
+        padding: 140px 15px 0;
+    }
+
+    /* Le header passe sur 2 lignes :
+       logo centré en haut, liens + bouton Contact en dessous */
+    header{
+        height: auto;
+        padding: 10px 15px;
+        margin-top: 10px;
+        border-radius: 20px;
+    }
+
+    .navbar{
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 8px 10px;
+    }
+
+    .nav-center{
+        order: -1;
+        flex: 0 0 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-center img{
+        height: 42px;
+    }
+
+    .nav-left{
+        flex: 1 1 auto;
+    }
+
+    .nav-right{
+        flex: 0 0 auto;
+    }
+
+    .nav-left ul{
+        flex-wrap: wrap;
+        gap: 6px 14px;
+    }
+
+    li{
+        font-size: 15px;
+    }
+
+    .contact a{
+        font-size: 15px;
+        padding: 4px 10px;
+    }
+
+    /* Textes */
+    .titre-index,
+    .titre-contact{
+        font-size: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .sous-titre{
+        font-size: 18px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .presentation{
+        font-size: 22px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .presentation-text{
+        font-size: 16px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* Page contact : l'adresse e-mail peut passer à la ligne */
+    .mail{
+        font-size: 16px;
+        margin-left: 10px;
+        overflow-wrap: anywhere;
+    }
+
+    /* Cartes : elles rétrécissent au lieu de déborder */
+    .cartes-container{
+        gap: 20px;
+    }
+
+    .carte{
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 374px;
+    }
+
+    .carte img.image-carte{
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    .carte-title{
+        font-size: 24px;
+    }
+
+    /* Pages projets (complète la règle existante à 700px) */
+    .projet-layout{
+        gap: 20px;
+        margin: 10px auto;
+    }
+
+    .preview,
+    .projet-desc{
+        flex: none;
+    }
+
+    .projet-desc{
+        max-width: 100%;
+    }
+
+    .projet-desc h2{
+        font-size: 20px;
+    }
+
+    /* Footer */
+    .footer-content{
+        padding: 15px 10px;
+    }
+
+    .footer-content .list{
+        gap: 14px 20px;
+    }
+
+    .footer-content .list img{
+        width: 36px;
+        height: 36px;
+        margin-left: 0;
+    }
+
+    .footer-content p{
+        font-size: 12px;
+        line-height: 1.5;
+    }
+}
+
+/* ---------- Petits mobiles (jusqu'à 480px) ---------- */
+@media (max-width: 480px){
+    body{
+        padding: 145px 12px 0;
+    }
+
+    header{
+        padding: 8px 12px;
+    }
+
+    li{
+        font-size: 13px;
+    }
+
+    .contact a{
+        font-size: 13px;
+        padding: 3px 8px;
+    }
+
+    .nav-left ul{
+        gap: 6px 10px;
+    }
+
+    .titre-index,
+    .titre-contact{
+        font-size: 28px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .sous-titre{
+        font-size: 16px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .presentation{
+        font-size: 20px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .presentation-text{
+        font-size: 15px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .mail{
+        font-size: 14px;
+        margin-left: 8px;
+    }
+
+    .carte-title{
+        font-size: 22px;
+    }
+
+    .carte-description{
+        font-size: 15px;
+    }
+}
